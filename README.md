@@ -1,5 +1,4 @@
 # Comparación entre el índice SPI y el SPI
-
 En este repositorio se encuentra toda la documentación y trabajo técnico detrás del análisis comparativo entre dos índices de sequía.
 
 
