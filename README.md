@@ -6,9 +6,9 @@ En este repositorio se encuentra toda la documentación y trabajo técnico detr�
 
 | DIRECTORIO | DESCRIPCIÓN | SUB-DIRS
 |-----|-------|-------|------|
-| **00_SCRIPTS** | Contiene los códigos creados para el trabajo, en teoría todo se ejecuta desde acá (las rutas ya están específicadas) | *ninguno* |
-| **01_DATA** | Contiene los datos originales e intermedios | *for_indices:* datos limpios y listos para proceder a la descarga de los datos \\ *raw:* archivos originales (sin modificar nada) \\ *SMN_limpios:* archivos intermedios de limpieza | 
-| **02_OUTPUTS** | CSV de salida con los índices calculados | *ven3:* indices calculados con ventana de 3 meses\\ *ven12:* índices calculados con ventana de 12 meses|
+| **00_SCRIPTS** | Contiene los códigos creados para el trabajo, en teoría todo se ejecuta desde acá (las rutas ya están específicadas) | *ninguno* 
+| **01_DATA** | Contiene los datos originales e intermedios | *for_indices:* datos limpios y listos para proceder a la descarga de los datos \\ *raw:* archivos originales (sin modificar nada) \\ *SMN_limpios:* archivos intermedios de limpieza 
+| **02_OUTPUTS** | CSV de salida con los índices calculados | *ven3:* indices calculados con ventana de 3 meses\\ *ven12:* índices calculados con ventana de 12 meses
 
 
 -----
