@@ -1,0 +1,79 @@
+---
+title: "Reporte de exploración del comportamiento del SPI y SPEI en Jalisco"
+author: "DALM"
+type: article
+format: pdf
+---
+
+# Resumen
+
+Los scripts utilizados y documentación realizada en este trabajo pueden encontrarse en [GitHub](https://github.com/abigaillopezm/SPIvsSPEI). 
+
+
+# Introducción
+
+
+# Justificación
+Dicho lo anterior, el hecho de extender los estudios sobre los indicadores 
+
+# Objetivos
+
+**Objetivo general:**
+Explorar el comportamiento del Índice de Precipitación Estandarizado (SPI) y del Índice de Precipitación y Evapotranspiración Estandarizado (SPEI)
+
+**Objetivos específicos:**
+1. Definir una zona de estudio adecuada en la que se pueda observar el efecto de la sequía bajo diferentes condiciones de altura y continentalidad. <br>
+2. Calcular el Índice de Precipitación Estandarizado (SPI) y del Índice de Precipitación y Evapotranspiración Estandarizado (SPEI). <br>
+3. Analizar el comportamiento de los índices de sequía calculados y, por lo tanto, de la sequía en locaciones específicas de Jalisco. <br>
+
+# Método y datos
+
+## Sobre el área de estudio
+Se eligió como zona de estudio el estado de Jalisco que se encuentra ubicado aproximadamente entre los ¨¨ de longitud y ¨¨ de latitud. Dada su cercanía con el ocáno, cuenta con un clima que va desde ... en la costa y .... en la parte más continental.
+
+
+![Estaciones meteorológicas existentes en el estado de Jalisco](../Jalisco_estacs.png)
+
+## Sobre la obtención de datos y el control de calidad
+Se utilzaron datos provenientes del Servicio Meteorológico Nacional (SMN), específicamente los registrados por las 276 estaciones meteorológicas existentes en el estado (Figura 1). Cabe mencionar, que de este conjunto el 53.62% se encuentram suspendidas mientras que el 46.38% se registran como operativas. 
+
+Entonces, se descargaron los datos utilizando un script de bash shell
+
+Después, se estandarizo el formato de las columnas, se eliminó la columna de evapotransp
+
+Ahora bien, una vez que se hizo la correcta lectura de los datos, se continuo con el control de calidad simple, es decir, se eliminaron posibles errores considerano los límites físicos de la temperatura y precipitación como se indica a continuación:
+* La temperatura máxima no puede ser menor que la temperatura mínima, de modo que, en los registros donde Tmin > Tmax ambos valores se eliminaron
+* La precipitación no puede tener valores negativos, por lo tanto, los registros donde se localizó este rror fueron removidos
+
+Finalmente, como último paso del control de calidad de los datos se verificó la integridad de la serie de tiempo; es decir, para que una estación fuera considerada, esta debía tener al menos el 90% de registros a lo largo de todo el periodo de funcionamiento de la estación, en otras palabras, se descartaron las estaciones donde el faltante de los datos fuera mayor al 10%. Como era de esperarse, la mayoría de las estaciones no pudieron pasar esta parte de la prueba, por lo que, en futuros estudios se agregará el uso de otras bases de datos como CHIRPS o los provenientes de DAYMET. Mientras tanto, para subsanar esta escasez de datos, se considero únicamente el período de 1991 a 2020.
+
+
+## Sobre el cálculo de los índices
+
+### Índice de Precipitación Estandarizado (SPI)
+
+### Índice de Precipitación y Evapotranspiración Estandarizado (SPEI)
+
+
+# Resultados 
+
+## Para la ventana de 3 meses
+![(Índice de Precipitación Estandarizado (SPI) e Índice de Precipitación y Evapotranspiración Estadarizado (SPEI) con ventana de 3 meses para el periodo 1991 - 2020 en la estación 14002](./02_OUTPUTS/_indices_ven314002_1991_2020.png)
+
+![(Índice de Precipitación Estandarizado (SPI) e Índice de Precipitación y Evapotranspiración Estadarizado (SPEI) con ventana de 3 meses para el periodo 1991 - 2020 en la estación 14038](./02_OUTPUTS/_indices_ven314038_1991_2020.png)
+
+![(Índice de Precipitación Estandarizado (SPI) e Índice de Precipitación y Evapotranspiración Estadarizado (SPEI) con ventana de 3 meses para el periodo 1991 - 2020 en la estación 14066](./02_OUTPUTS/_indices_ven314066_1991_2020.png)
+
+![(Índice de Precipitación Estandarizado (SPI) e Índice de Precipitación y Evapotranspiración Estadarizado (SPEI) con ventana de 3 meses para el periodo 1991 - 2020 en la estación 14339](./02_OUTPUTS/_indices_ven314339_1991_2020.png)
+
+## Para la ventana de 12 meses
+![(Índice de Precipitación Estandarizado (SPI) e Índice de Precipitación y Evapotranspiración Estadarizado (SPEI) con ventana de 12 meses para el periodo 1991 - 2020 en la estación 14002](./02_OUTPUTS/_indices_ven1214002_1991_2020.png)
+
+![(Índice de Precipitación Estandarizado (SPI) e Índice de Precipitación y Evapotranspiración Estadarizado (SPEI) con ventana de 12 meses para el periodo 1991 - 2020 en la estación 14038](./02_OUTPUTS/_indices_ven1214038_1991_2020.png)
+
+![(Índice de Precipitación Estandarizado (SPI) e Índice de Precipitación y Evapotranspiración Estadarizado (SPEI) con ventana de 12 meses para el periodo 1991 - 2020 en la estación 14066](./02_OUTPUTS/_indices_ven1214066_1991_2020.png)
+
+![(Índice de Precipitación Estandarizado (SPI) e Índice de Precipitación y Evapotranspiración Estadarizado (SPEI) con ventana de 12 meses para el periodo 1991 - 2020 en la estación 14339](./02_OUTPUTS/_indices_ven1214339_1991_2020.png)
+
+# Anexos
+## Anexo I: Sobre las estaciones meteorológicas consideradas
